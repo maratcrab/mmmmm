@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonfire</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="fog"></div>
+
+    <header>
+        <h1>ASHEN ONE</h1>
+        <p>Remain among the accursed</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Bonfire</h2>
+            <p>
+                A fleeting warmth in a dying world.
+                Rest, if you must… but darkness never sleeps.
+            </p>
+
+            <button id="restBtn">Rest</button>
+
+            <div class="lore" id="lore">
+                <p>
+                    When the fire fades, and the lords go without thrones,
+                    the Ashen Ones will rise. Nameless, accursed,
+                    bound to the will of dying embers.
+                </p>
+                <p class="lore-small">
+                    — Fragment of an old prophecy
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© The Fire Fades</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('restBtn');
+        const lore = document.getElementById('lore');
+
+        btn.addEventListener('click', () => {
+            lore.classList.toggle('show');
+
+            btn.textContent = lore.classList.contains('show')
+                ? 'Leave'
+                : 'Rest';
+        });
+    </script>
+
+</body>
+</html>
